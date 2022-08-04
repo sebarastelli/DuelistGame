@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>DUELO</title>
+    <script src="codigo.js"></script>
+</head>
+<body>
+    <h1 class="titulo">Duelo ⚔ </h1>
+
+    <section id="select-el" class="container-pick">
+        <h2>Elige tu duelista:</h2>
+        <label for="juampi">Juampi</label>        
+        <input type="radio" name="mascotas" id="juampi">
+        <label for="negro">Negro</label>
+        <input type="radio" name="mascotas" id="negro">
+        <label for="chulin">Chulin</label>
+        <input type="radio" name="mascotas" id="chulin">
+        <label for="taz">Taz</label>
+        <input type="radio" name="mascotas" id="taz">
+        <label for="messi">Messi</label>
+        <input type="radio" name="mascotas" id="messi">
+        <label for="balu">Balu</label>
+        <input type="radio" name="mascotas" id="balu">
+        
+        <button id="boton-seleccionar">SELECCIONAR</button>
+    </section>
+    <section id="atack-el" class="container-atack">
+        <h2>Elige el tipo de ataque</h2>
+        <p>
+            <button id="boton-fire">Fuego 🔥</button>
+            <button id="boton-water">Agua 💧</button>
+            <button id="boton-dirt">Tierra 🌱</button>
+        </p>
+
+        <p>Tu duelista <span id="mascota-jugador"></span> tiene <span id="vidas-jugador">3</span> vidas</p>
+        <p>El duelista enemigo <span id="mascota-enemigo"></span> tiene <span id="vidas-enemigo">3</span> vidas</p>
+    </section>
+    <section id="mensajes-el" class="container-msj">
+        
+    </section>
+    <section id="reset-el" class="reset-button">
+        <button id="reiniciar">Reiniciar</button>
+    </section>
+    
+    
+    
+</body>
+</html>
