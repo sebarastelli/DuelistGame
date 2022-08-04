@@ -37,9 +37,6 @@ function seleccionarMascotaJugador() {
     botonReiniciar.style.display = "block"
     let juampi = document.getElementById("juampi")
     let negro = document.getElementById("negro")
-    let chulin = document.getElementById("chulin")
-    let taz = document.getElementById("taz")
-    let messi = document.getElementById("messi")
     let balu = document.getElementById("balu")
     let mascotaJugador = document.getElementById("mascota-jugador")
     
@@ -48,15 +45,6 @@ function seleccionarMascotaJugador() {
     }
     else if(negro.checked){
             mascotaJugador.innerHTML = "NEGRO"
-    }
-    else if(chulin.checked){
-            mascotaJugador.innerHTML = "CHULIN"
-    }
-    else if(taz.checked){
-        mascotaJugador.innerHTML = "TAZ"
-    }
-    else if(messi.checked){
-            mascotaJugador.innerHTML = "MESSI"
     }
     else if(balu.checked){
             mascotaJugador.innerHTML = "BALU"
@@ -81,15 +69,6 @@ function seleccionarMascotaEnemiga(){
 }
 else if(enemigo == 2){
          mascotaEnemiga.innerHTML = "NEGRO"
-}
-else if(enemigo == 3){
-       mascotaEnemiga.innerHTML = "CHULIN"
-}
-else if(enemigo == 4){
- mascotaEnemiga.innerHTML = "TAZ"
-}
-else if(enemigo == 5){
-       mascotaEnemiga.innerHTML = "MESSI"
 }
 else{
      mascotaEnemiga.innerHTML = "BALU"
