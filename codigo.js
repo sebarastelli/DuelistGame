@@ -1,27 +1,33 @@
+let sectionAtaque = document.getElementById("atack-el")
+let botonMascotaJugador = document.getElementById("boton-seleccionar")
+let botonFuego = document.getElementById("boton-fire")
+let botonAgua = document.getElementById("boton-water")
+let botonTierra = document.getElementById("boton-dirt")
+let sectionSelect = document.getElementById("select-el")
+let botonReiniciar = document.getElementById("reiniciar")
+let juampi = document.getElementById("juampi")
+let negro = document.getElementById("negro")
+let balu = document.getElementById("balu")
+let mascotaJugador = document.getElementById("mascota-jugador")
+let mascotaEnemiga = document.getElementById("mascota-enemigo")
+let spanVidasEnemigo = document.getElementById("vidas-enemigo")
+let spanVidasJugador = document.getElementById("vidas-jugador")
+let sectionMensajes = document.getElementById("mensajes-el")
+
 let ataqueJugador
 let ataqueEnemigo
 let resultado
 let vidasEnemigo = 3
 let vidasJugador = 3
 
-function iniciarJuego() {
-    let sectionAtaque = document.getElementById("atack-el")
+function iniciarJuego() { 
     sectionAtaque.style.display = "none";
-    
-    
-    let botonMascotaJugador = document.getElementById("boton-seleccionar")
     botonMascotaJugador.addEventListener("click", seleccionarMascotaJugador)
-
-    let botonFuego = document.getElementById("boton-fire")
-    let botonAgua = document.getElementById("boton-water")
-    let botonTierra = document.getElementById("boton-dirt")
     botonFuego.addEventListener("click", ataqueFuego)
     botonAgua.addEventListener("click", ataqueAgua)
     botonTierra.addEventListener("click", ataqueTierra)
-    let botonReiniciar = document.getElementById("reiniciar")
     botonReiniciar.style.display = "none"
     botonReiniciar.addEventListener("click", reiniciarJuego)
-
 }
 
 function aleatorio(min,max){
@@ -29,17 +35,9 @@ function aleatorio(min,max){
 }
 
 function seleccionarMascotaJugador() {
-    let sectionAtaque = document.getElementById("atack-el")
-    sectionAtaque.style.display = "block";
-    let sectionSelect = document.getElementById("select-el")
+     sectionAtaque.style.display = "block";
     sectionSelect.style.display = "none";
-    let botonReiniciar = document.getElementById("reiniciar")
     botonReiniciar.style.display = "block"
-    let juampi = document.getElementById("juampi")
-    let negro = document.getElementById("negro")
-    let balu = document.getElementById("balu")
-    let mascotaJugador = document.getElementById("mascota-jugador")
-    
     if (juampi.checked){
             mascotaJugador.innerHTML = "JUAMPI"
     }
@@ -56,7 +54,6 @@ function seleccionarMascotaJugador() {
     seleccionarMascotaEnemiga()
 }
 function seleccionarMascotaEnemiga(){
-    let mascotaEnemiga = document.getElementById("mascota-enemigo")
     juampi = 1
     negro = 2
     chulin = 3
@@ -90,7 +87,6 @@ function ataqueTierra() {
 }
 
 function ataqueAzarEnemigo(){
-
     let ataqueEnemigoAzar = aleatorio(1,3)
     if (ataqueEnemigoAzar == 1){
         ataqueEnemigo = "Fuego🔥"
@@ -106,9 +102,6 @@ function ataqueAzarEnemigo(){
 }
 
 function combate(){
-    let spanVidasEnemigo = document.getElementById("vidas-enemigo")
-    let spanVidasJugador = document.getElementById("vidas-jugador")
-  
     if ((ataqueJugador == "Fuego🔥" && ataqueEnemigo == "Tierra🌱") || (ataqueJugador == "Agua💧" && ataqueEnemigo == "Fuego🔥") || (ataqueJugador == "Tierra🌱" && ataqueEnemigo == "Agua💧")){
         crearMensaje(" GANASTE ")
         vidasEnemigo--
@@ -133,20 +126,15 @@ function revisarVidas() {
 }
 
 function crearMensaje(resultado) {
-    let sectionMensajes = document.getElementById("mensajes-el")
     let parrafo=document.createElement('p')
     parrafo.innerHTML='Tu duelista atacó con '+ataqueJugador+' y el enemigo atacó con '+ataqueEnemigo+ resultado;
     sectionMensajes.appendChild(parrafo)
 }
 
 function  crearMensajeFinal(resultadoFinal) {
-    let sectionMensajes = document.getElementById("mensajes-el")
     let parrafo=document.createElement('p')
     parrafo.innerHTML= resultadoFinal
     sectionMensajes.appendChild(parrafo) 
-    let botonFuego = document.getElementById("boton-fire")
-    let botonAgua = document.getElementById("boton-water")
-    let botonTierra = document.getElementById("boton-dirt")
     botonFuego.disabled = true;
     botonAgua.disabled = true;
     botonTierra.disabled = true;

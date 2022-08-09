@@ -122,18 +122,7 @@ input:checked + label {
     margin-top: 9px;
 }
 
-@media (max-width: 750px) {
-    .container-pick{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .container-pick h2{
-        margin-bottom: 20px;
-    }
-    .container-pick input{
-        margin: 5px;
-        height: 40px;
-    }
+footer{
+    text-align: center;
+    font-family: 'Arial Narrow Bold', sans-serif;
 }
