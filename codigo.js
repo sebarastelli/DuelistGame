@@ -6,7 +6,7 @@ let botonTierra = document.getElementById("boton-dirt")
 let sectionSelect = document.getElementById("select-el")
 let botonReiniciar = document.getElementById("reiniciar")
 let juampi = document.getElementById("juampi")
-let negro = document.getElementById("negro")
+let pepi = document.getElementById("negro")
 let balu = document.getElementById("balu")
 let mascotaJugador = document.getElementById("mascota-jugador")
 let mascotaEnemiga = document.getElementById("mascota-enemigo")
@@ -41,8 +41,8 @@ function seleccionarMascotaJugador() {
     if (juampi.checked){
             mascotaJugador.innerHTML = "JUAMPI"
     }
-    else if(negro.checked){
-            mascotaJugador.innerHTML = "NEGRO"
+    else if(pepi.checked){
+            mascotaJugador.innerHTML = "PEPI"
     }
     else if(balu.checked){
             mascotaJugador.innerHTML = "BALU"
